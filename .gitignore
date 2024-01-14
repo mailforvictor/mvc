@@ -1,0 +1,6 @@
+.idea
+/vendor
+!/vendor/mvc
+/tmp/errors.log
+composer.lock
+composer.phar

@@ -1,0 +1,14 @@
+{
+  "name": "victor/mvc",
+  "autoload": {
+    "psr-4": {
+      "mvc\\": "vendor/mvc/core",
+      "app\\": "app"
+    }
+  },
+  "require": {
+    "gabordemooij/redbean": "dev-master",
+    "ext-curl": "*",
+    "ext-json": "*"
+  }
+}
