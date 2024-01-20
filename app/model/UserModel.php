@@ -13,6 +13,12 @@ class UserModel extends AppModel {
     ];
 
     public function add(array $user) {
+        $options = [
+            'memory_cost' => 2048,
+            'time_cost' => 4,
+            'threads' => 3,
+        ];
+        $user['password'] = password_hash($user['password'], PASSWORD_ARGON2I, $options);
         $this->load($user);
         $id = $this->save('users', false);
         $this->attributes['id'] = $id;

@@ -33,7 +33,7 @@ class Validator {
     }
 
     public function passwordValidation($password): array {
-        return preg_match("/^(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*])[A-Za-z!@#$%^&*]{8,}$/", $password)
+        return preg_match("/^(?=.*[a-z])(?=.*[A-Z])(?=.*[\/|\\|\|!@#$%^&*+()_-])[A-Za-z\/|\\|\|!@#$%^&*+()_-]{8,}$/", $password)
             ? []
             : ['message' => 'Password must contain one lowercase letter of the English alphabet, one uppercase letter and a special character.'];
     }
